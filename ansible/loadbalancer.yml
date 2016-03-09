@@ -1,5 +1,6 @@
 ---
 - hosts: loadbalancer
+  gather_facts: true
 
   tasks:
     - name: install haproxy
