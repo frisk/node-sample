@@ -4,4 +4,4 @@
 
   tasks:
     - name: install packages for ansible support
-      raw: sudo dnf -y -e0 -d0 install python python-dnf
+      raw: sudo dnf -y -e0 -d0 install python python-dnf yum
