@@ -5,8 +5,8 @@
     - vars.yml
 
   tasks:
-    - name: Install yum packages
-      yum: name={{item}} state=latest
+    - name: Install packages
+      dnf: name={{item}} state=latest
       with_items:
         - git
         - vim
