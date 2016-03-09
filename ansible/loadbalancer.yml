@@ -6,6 +6,7 @@
     - name: install haproxy
       dnf: name=haproxy state=latest
       notify: flush iptables
+      sudo: yes
 
     - name: add haproxy config
       template: src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg backup=yes
