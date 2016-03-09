@@ -20,6 +20,7 @@
   handlers:
     - name: restart haproxy
       service: name=haproxy state=restarted
+      sudo: yes
 
     - name: flush iptables
       shell: iptables -F
