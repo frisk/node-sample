@@ -24,6 +24,7 @@
 
     - name: Create web user
       user: name=web
+      sudo: yes
 
     - name: Create project folder
       file: path=/var/www group=web owner=web mode=755 state=directory
