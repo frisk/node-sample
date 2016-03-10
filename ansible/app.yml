@@ -12,6 +12,7 @@
         - vim
         - nodejs
         - npm
+      sudo: yes
 
     - name: install n (node version installer/switcher)
       npm: name=n state=present global=yes
