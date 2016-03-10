@@ -15,7 +15,7 @@
 
   handlers:
     - name: restart haproxy
-      service: name=haproxy state=restarted
+      shell: systemctl restart haproxy
       sudo: yes
 
     - name: flush iptables
