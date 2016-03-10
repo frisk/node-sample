@@ -20,6 +20,7 @@
 
     - name: install the latest stable version of node
       shell: n stable
+      sudo: yes
 
     - name: Create web user
       user: name=web
