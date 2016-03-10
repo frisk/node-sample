@@ -5,6 +5,7 @@
   tasks:
     - name: install haproxy
       dnf: name=haproxy state=latest
+      command: /bin/true
       notify: flush iptables
       sudo: yes
 
@@ -13,9 +14,13 @@
       notify: restart haproxy
       sudo: yes
 
+    - name: ensure haproxy is started
+      service: name=haproxy state=started
+      sudo: yes
+
   handlers:
     - name: restart haproxy
-      shell: systemctl restart haproxy
+      service: name=haproxy state=restarted
       sudo: yes
 
     - name: flush iptables
