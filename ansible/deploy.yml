@@ -15,6 +15,8 @@
   handlers:
     - name: reload {{project_name}}
       service: name={{project_name}} state=reloaded
+      sudo: yes
 
     - name: flush iptables
       shell: iptables -F
+      sudo: yes
