@@ -32,9 +32,11 @@
 
     - name: Add systemd conf
       template: src=templates/systemd.service.j2 dest=/etc/systemd/system/{{project_name}}.service
+      sudo: yes
+
+    - command: /bin/true
       notify:
         - enable {{project_name}}
-      sudo: yes
 
   handlers:
     - name: enable {{project_name}}
