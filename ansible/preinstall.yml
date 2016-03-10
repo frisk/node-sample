@@ -5,3 +5,7 @@
   tasks:
     - name: install packages for ansible support
       raw: sudo dnf -y -e0 -d0 install python python-dnf
+
+    - name: be sure libselinux-python are installed
+      dnf: name=libselinux-python state=present
+      sudo: yes

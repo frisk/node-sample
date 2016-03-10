@@ -8,10 +8,6 @@
       notify: flush iptables
       sudo: yes
 
-    - name: be sure libselinux-python are installed
-      dnf: name=libselinux-python state=present
-      sudo: yes
-
     - name: add haproxy config
       template: src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg backup=yes
       notify: restart haproxy
