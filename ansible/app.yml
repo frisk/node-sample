@@ -28,6 +28,7 @@
 
     - name: Create project folder
       file: path=/var/www group=web owner=web mode=755 state=directory
+      sudo: yes
 
     - name: Add systemd conf
       template: src=templates/systemd.service.j2 dest=/etc/systemd/system/{{project_name}}.service
