@@ -39,3 +39,4 @@
   handlers:
     - name: enable {{project_name}}
       shell: systemctl enable {{project_name}}
+      sudo: yes
