@@ -5,9 +5,11 @@
   tasks:
     - name: install haproxy
       dnf: name=haproxy state=latest
-      command: /bin/true
       notify: flush iptables
       sudo: yes
+
+    - command: /bin/true
+      notify: flush iptables
 
     - name: add haproxy config
       template: src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg backup=yes
