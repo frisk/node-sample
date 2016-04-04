@@ -1,6 +1,6 @@
 [app]
-52.33.12.230 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
-52.36.252.119 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
+52.11.79.64 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
+52.11.94.205 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
 
 [loadbalancer]
-52.24.176.123 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
+52.10.56.252 ansible_ssh_private_key_file=~/.ssh/frisk-key-pair-uswest1.pem ansible_ssh_user=fedora host_key_checking=false
