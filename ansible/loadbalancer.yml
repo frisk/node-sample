@@ -12,6 +12,9 @@
       notify: restart haproxy
       sudo: yes
 
+    - name: haproxy allow any connection selinux
+      raw: sudo setsebool -P haproxy_connect_any 1
+
     - command: /bin/true
       notify: flush iptables
 
